@@ -1591,12 +1591,32 @@ span.highlight-accent {
         transition: var(--transition-smooth);
         z-index: 150;
         padding-top: 60px;
-        overflow-y: auto;
+        overflow: hidden;
+        height: 100dvh;
+        height: 100vh;
     }
     
     .sidebar.active {
         left: 0;
         box-shadow: 10px 0 40px rgba(0, 0, 0, 0.08);
+    }
+    
+    .sidebar-nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        min-height: 0;
+    }
+    
+    .sidebar-footer {
+        flex-shrink: 0;
+    }
+    
+    .sidebar-photo-container {
+        flex-shrink: 0;
+    }
+    
+    .sidebar-info {
+        flex-shrink: 0;
     }
     
     .mobile-header {
@@ -1748,5 +1768,38 @@ span.highlight-accent {
     
     .timeline-card {
         padding: 24px 16px;
+    }
+    
+    .sidebar-photo {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+    }
+    
+    .sidebar-photo-container {
+        padding: 14px 16px 6px 16px;
+    }
+    
+    .sidebar-name {
+        font-size: 1.05rem;
+    }
+    
+    .sidebar-tagline {
+        font-size: 0.6rem;
+    }
+    
+    .sidebar-links .nav-link {
+        padding: 5px 16px;
+        font-size: 0.75rem;
+    }
+    
+    .sidebar-footer {
+        padding: 8px 12px;
+    }
+    
+    .sidebar-social {
+        width: 30px;
+        height: 30px;
+        font-size: 0.85rem;
     }
 }
