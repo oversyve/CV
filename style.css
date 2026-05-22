@@ -390,27 +390,7 @@ span.highlight-accent {
     display: block;
 }
 
-/* Sidebar en mobile: oculto por defecto, deslizable */
-@media (max-width: 1024px) {
-    .mobile-header {
-        display: flex;
-    }
-
-    .sidebar {
-        left: -280px;
-        transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        z-index: 150;
-    }
-
-    .sidebar.active {
-        left: 0;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 80px 20px 0 20px;
-    }
-}
+/* Sidebar en mobile viene después, en el bloque responsive */
 
 /* ==========================================================================
    CONTENIDO PRINCIPAL A LA DERECHA
@@ -1607,8 +1587,11 @@ span.highlight-accent {
 
 @media (max-width: 1024px) {
     .sidebar {
-        left: -280px; /* Ocultar sidebar por defecto en tablet/mobile */
+        left: -280px;
         transition: var(--transition-smooth);
+        z-index: 150;
+        padding-top: 60px;
+        overflow-y: auto;
     }
     
     .sidebar.active {
@@ -1629,19 +1612,7 @@ span.highlight-accent {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 99;
-    }
-    
-    .mobile-logo {
-        font-family: var(--font-title);
-        font-size: 1.3rem;
-        font-weight: 800;
-        color: var(--text-main);
-        text-decoration: none;
-    }
-    
-    .mobile-logo span {
-        color: var(--accent);
+        z-index: 200;
     }
     
     .mobile-nav-toggle {
