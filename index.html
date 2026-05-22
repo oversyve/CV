@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoswar Ramirez | Data Scientist, Data Analyst & Agentic AI Orchestrator</title>
+
+    <!-- Meta Tags para SEO -->
+    <meta name="description"
+        content="Portafolio profesional de Hoswar Ramirez, Data Scientist y Data Analyst Senior. Especialista en optimización de negocio, modelos de Machine Learning y orquestación de Agentes de Inteligencia Artificial.">
+    <meta name="keywords"
+        content="Data Scientist, Data Analyst, Agentic AI, Inteligencia Artificial, Machine Learning, Python, SQL, Power BI, Portafolio, Curriculum Vitae, Hoswar Ramirez">
+    <meta name="author" content="Hoswar Ramirez Perez">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hoswar Ramirez | Data Scientist, Data Analyst & Agentic AI Orchestrator">
+    <meta property="og:description"
+        content="Portafolio profesional y CV digital. Especialista en Ciencia de Datos, Análisis y Orquestación de Agentes de IA con certificaciones de IBM.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/oversyve/portfolio-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Hoswar Ramirez | Data Scientist, Data Analyst & Agentic AI Orchestrator">
+    <meta property="twitter:description"
+        content="Portafolio profesional y CV digital. Especialista en Ciencia de Datos y Orquestación de Agentes de IA.">
+
+    <!-- Fuentes de Google: Outfit (Títulos) e Inter (Cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Archivo JS (Cargado en diferido) -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <!-- Fondo interactivo Canvas (Optimizado para modo claro) -->
+    <canvas id="canvas-bg"></canvas>
+
+    <!-- Cabecera Móvil (Visible solo en pantallas pequeñas) -->
+    <header class="mobile-header">
+        <img src="foto.png" alt="Hoswar Ramirez" class="mobile-logo-photo">
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Abrir barra lateral" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Overlay oscuro al abrir sidebar en mobile -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar Fijo a la Izquierda (Fondo blanco puro) -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Foto de perfil en la parte superior. Fondo blanco de la imagen se funde con el sidebar -->
+        <div class="sidebar-photo-container">
+            <img src="foto.png" alt="Hoswar Ramirez" class="sidebar-photo">
+        </div>
+
+        <!-- Nombre y título sutil -->
+        <div class="sidebar-info text-center">
+            <h2 class="sidebar-name">Hoswar Ramirez</h2>
+            <p class="sidebar-tagline">Data Scientist & Analyst</p>
+        </div>
+
+        <!-- Menú de Navegación Vertical -->
+        <nav class="sidebar-nav">
+            <ul class="sidebar-links">
+                <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                <li><a href="#about" class="nav-link"><i class="fa-solid fa-user-tie"></i> Perfil</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experiencia</a></li>
+                <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Educación</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fa-solid fa-gears"></i> Especialidades</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Proyectos</a></li>
+                <li><a href="#certificates" class="nav-link"><i class="fa-solid fa-award"></i> Certificaciones</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Redes y Contacto Rápido en la base -->
+        <div class="sidebar-footer">
+            <a href="https://github.com/oversyve" target="_blank" class="sidebar-social" aria-label="GitHub"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="mailto:hoswarramirez.24@gmail.com" class="sidebar-social" aria-label="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+51910855035" class="sidebar-social" aria-label="Teléfono"><i
+                    class="fa-solid fa-phone"></i></a>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal a la Derecha (Fondo gris claro #f5f5f7) -->
+    <div class="main-content" id="main-content">
+
+        <!-- Sección Hero (Estilo Apple Landing Page) -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <p class="hero-greeting">Portafolio Profesional</p>
+                <h1 class="hero-name">Hoswar Ramirez Perez</h1>
+                <h2 class="hero-spec-intro">Especialista en</h2>
+                <div class="hero-roles">
+                    <span class="hero-role role-blue">Data Analyst</span>
+                    <span class="role-sep">&#xB7;</span>
+                    <span class="hero-role role-dark">Data Scientist</span>
+                    <span class="role-sep">&#xB7;</span>
+                    <span class="hero-role role-gold">AI Engineer</span>
+                </div>
+
+                <p class="hero-desc">
+                    Profesional en Data Analytics y Data Science con experiencia en proyectos estratégicos basados en
+                    inteligencia artificial. Combino conocimientos en marketing digital para interpretar información
+                    orientada al negocio
+                    y comunicar insights a nivel ejecutivo. Especializado en análisis, visualización avanzada y técnicas
+                    de Machine Learning, con enfoque en transformar datos en soluciones de valor aplicadas a problemas
+                    reales.
+                </p>
+
+                <div class="hero-metadata">
+                    <span><i class="fa-solid fa-map-pin"></i> Lima, Perú</span>
+                    <span><i class="fa-solid fa-calendar-day"></i> 28 años</span>
+                    <span><i class="fa-solid fa-language"></i> Español (Nativo) | Inglés (Intermedio)</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" id="btn-hero-contact"><i
+                            class="fa-solid fa-paper-plane"></i> Contactar</a>
+                    <a href="CV_Hoswar_Ramirez.pdf" download="CV_Hoswar_Ramirez.pdf" class="btn btn-secondary"
+                        id="btn-hero-cv"><i class="fa-solid fa-file-pdf"></i> Descargar CV</a>
+                </div>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Ir a sección Sobre Mí">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí / Perfil Ejecutivo -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2 class="section-heading text-center">Perfil Ejecutivo</h2>
+                <div class="about-grid">
+                    <div class="about-text-card glass-panel">
+                        <h3>Liderazgo y Estrategia de Datos</h3>
+                        <p>
+                            Especialista en <b>Data Analytics</b> y <b>Data Science</b> con un historial comprobado
+                            liderando
+                            iniciativas de datos que impactan directamente el crecimiento y eficiencia empresarial. Mi
+                            enfoque combina rigurosidad técnica con una visión clara del negocio.
+                        </p>
+                        <p>
+                            Gracias a una sólida base en <b>marketing digital</b> y <b>desarrollo de proyectos</b>,
+                            logro
+                            tender puentes efectivos entre los equipos de ingeniería y la alta dirección, traduciendo
+                            requerimientos comerciales en modelos predictivos, optimizaciones geoespaciales y
+                            arquitecturas analíticas avanzadas.
+                        </p>
+                        <p>
+                            Actualmente, investigo y aplico metodologías en la <b>orquestación de agentes de IA</b> para
+                            automatizar la extracción de insights y la interacción en tiempo real con bases de datos.
+                        </p>
+                    </div>
+
+                    <div class="about-stats-grid">
+                        <div class="stat-card glass-panel text-center">
+                            <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Liderazgo de Proyectos</div>
+                        </div>
+                        <div class="stat-card glass-panel text-center">
+                            <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="stat-number" data-target="2">0</div>
+                            <div class="stat-label">Certificados Profesionales IBM</div>
+                        </div>
+                        <div class="stat-card glass-panel text-center">
+                            <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="stat-number" data-target="21">0</div>
+                            <div class="stat-label">Cursos IBM/Coursera Aprobados</div>
+                        </div>
+                        <div class="stat-card glass-panel text-center">
+                            <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Proyectos Terminados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Experiencia Laboral -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container">
+                <h2 class="section-heading text-center">Experiencia Profesional</h2>
+
+                <div class="timeline">
+                    <!-- Grupo Montalvo -->
+                    <div class="timeline-item left scroll-reveal">
+                        <div class="timeline-dot"><i class="fa-solid fa-scissors"></i></div>
+                        <div class="timeline-card glass-panel">
+                            <span class="timeline-date">2023 - Presente</span>
+                            <h3 class="timeline-role">Data Science & Analytics Lead</h3>
+                            <h4 class="timeline-company">Grupo Montalvo</h4>
+                            <p class="timeline-location"><i class="fa-solid fa-map-marker-alt"></i> Lima, Perú</p>
+                            <p class="timeline-desc">
+                                Dirección de la estrategia de ciencia de datos y desarrollo analítico del grupo,
+                                coordinando soluciones basadas en analítica espacial, predicción de demanda y
+                                segmentación de clientes.
+                            </p>
+                            <ul class="timeline-achievements">
+                                <li><strong>Expansión Geoespacial:</strong> Diseñé un modelo geoespacial de densidad
+                                    poblacional y competencia en Lima, localizando más de 15 áreas críticas comerciales
+                                    y resultando en la apertura de 3 nuevas sucursales.</li>
+                                <li><strong>Optimización de Márgenes (Pricing):</strong> Desarrollé e integré un modelo
+                                    de machine learning para optimización de precios y elasticidad de la demanda en 3
+                                    líneas de negocio principales.</li>
+                                <li><strong>Inteligencia Operativa:</strong> Lideré el análisis exploratorio de ventas
+                                    por sucursal y afluencia, lo que impulsó una reestructuración de horarios de
+                                    personal y mejoró la tasa de satisfacción de clientes.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Geo-Analytics</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Elasticidad de Demanda</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oversyve -->
+                    <div class="timeline-item right scroll-reveal">
+                        <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+                        <div class="timeline-card glass-panel">
+                            <span class="timeline-date">2021 - 2023</span>
+                            <h3 class="timeline-role">Project Manager</h3>
+                            <h4 class="timeline-company">Oversyve — Agencia de Marketing & Web</h4>
+                            <p class="timeline-location"><i class="fa-solid fa-map-marker-alt"></i> Lima, Perú</p>
+                            <p class="timeline-desc">
+                                Gestión del ciclo de vida del software y campañas digitales. Responsable de la entrega
+                                del servicio técnico y cumplimiento de plazos para clientes corporativos de desarrollo
+                                web y móvil.
+                            </p>
+                            <ul class="timeline-achievements">
+                                <li><strong>Gestión de Entregas:</strong> Dirigí e implementé más de 10 proyectos
+                                    digitales bajo estándares de alta calidad, asegurando un 95% de entregas exitosas a
+                                    tiempo.</li>
+                                <li><strong>Optimización de Procesos:</strong> Lideré equipos multidisciplinarios de
+                                    desarrollo y diseño (hasta 5 miembros), reduciendo en un 20% los tiempos de entrega
+                                    mediante flujos de trabajo optimizados (Agile/Scrum).</li>
+                                <li><strong>Crecimiento Digital:</strong> Diseñé estrategias de pauta publicitaria
+                                    digital que lograron un incremento promedio del 35% en el tráfico calificado de
+                                    clientes web.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Project Management</span>
+                                <span class="tag">Agile / Scrum</span>
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Analítica Web</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- El Pepe -->
+                    <div class="timeline-item left scroll-reveal">
+                        <div class="timeline-dot"><i class="fa-solid fa-chart-bar"></i></div>
+                        <div class="timeline-card glass-panel">
+                            <span class="timeline-date">Oct. 2018 - Ago. 2019</span>
+                            <h3 class="timeline-role">Marketing Coordinator</h3>
+                            <h4 class="timeline-company">El Pepe — Agencia de Marketing</h4>
+                            <p class="timeline-location"><i class="fa-solid fa-map-marker-alt"></i> Lima, Perú</p>
+                            <p class="timeline-desc">
+                                Coordinación analítica de pautas digitales y optimización de bases de datos orientada a
+                                mejorar la tasa de conversión y retorno de inversión de los clientes.
+                            </p>
+                            <ul class="timeline-achievements">
+                                <li><strong>Optimización del ROI:</strong> Monitoricé y analicé embudos de conversión
+                                    con Google Analytics y Facebook Pixel, incrementando el ROI publicitario global en
+                                    un 25%.</li>
+                                <li><strong>Automatización del Reporting:</strong> Diseñé cuadros de mando (dashboards)
+                                    en tiempo real, consolidando métricas publicitarias y reduciendo el tiempo de
+                                    reporting semanal de 4 horas a 30 minutos.</li>
+                                <li><strong>Email Marketing Avanzado:</strong> Segmenté y gestioné bases de datos de
+                                    +1,000 leads, logrando una mejora en la tasa de apertura del 15% mediante
+                                    herramientas de automatización.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Google Analytics</span>
+                                <span class="tag">KPI Dashboards</span>
+                                <span class="tag">Email Automation</span>
+                                <span class="tag">Facebook Ads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Educación Superior -->
+        <section id="education" class="education-section section-padding">
+            <div class="container">
+                <h2 class="section-heading text-center">Educación Superior</h2>
+                <div class="education-grid">
+                    <!-- UJGH -->
+                    <div class="education-card glass-panel scroll-reveal">
+                        <div class="education-header">
+                            <div class="edu-institution-logo">
+                                <i class="fa-solid fa-university"></i>
+                            </div>
+                            <div class="edu-meta">
+                                <span class="edu-date">2015 – 2018</span>
+                                <span class="edu-degree">Bachiller en Informática</span>
+                            </div>
+                        </div>
+                        <h3 class="edu-institution">Universidad José Gregorio Hernández</h3>
+                        <p class="edu-location"><i class="fa-solid fa-map-marker-alt"></i> Valera, Venezuela</p>
+                        <p class="edu-description">
+                            Formación integral orientada al desarrollo de software, análisis de sistemas, bases de datos
+                            y algoritmos avanzados.
+                        </p>
+                        <div class="edu-achievements">
+                            <strong>Logro destacado:</strong>
+                            <span>Otorgamiento de la <span class="highlight-primary">Beca de Continuidad de
+                                    Estudios</span> por rendimiento académico sobresaliente durante los últimos 6
+                                trimestres de la carrera.</span>
+                        </div>
+                        <div class="edu-action">
+                            <a href="https://universidades24.com/uniher-jose-gregorio-hernandez-valera" target="_blank"
+                                class="btn-edu-link">
+                                <span>Detalles de la Universidad</span>
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- UPTT -->
+                    <div class="education-card glass-panel scroll-reveal">
+                        <div class="education-header">
+                            <div class="edu-institution-logo">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="edu-meta">
+                                <span class="edu-date">2014 – 2018</span>
+                                <span class="edu-degree">Ingeniero en Construcción Civil</span>
+                            </div>
+                        </div>
+                        <h3 class="edu-institution">UPTT "Mario Briceño Iragorry"</h3>
+                        <p class="edu-location"><i class="fa-solid fa-map-marker-alt"></i> Valera, Venezuela</p>
+                        <p class="edu-description">
+                            Estudios enfocados en la física aplicada, modelado estructural, métodos de optimización de
+                            recursos e ingeniería civil.
+                        </p>
+                        <div class="edu-achievements">
+                            <strong>Logro destacado:</strong>
+                            <span><span class="highlight-accent">Reconocimiento Académico de Excelencia</span> por
+                                situarse en las 10 mejores calificaciones de toda la Facultad de Ingeniería Civil al
+                                culminar la carrera.</span>
+                        </div>
+                        <div class="edu-action">
+                            <a href="https://www.upttmbi.edu.ve/site/index.html" target="_blank" class="btn-edu-link">
+                                <span>Web Oficial UPTT</span>
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades / Especialidades -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <h2 class="section-heading text-center">Especialidades Técnicas</h2>
+                <p class="section-subheading text-center">Áreas de competencia profesional y herramientas tecnológicas
+                </p>
+
+                <div class="skills-grid">
+                    <!-- Categoría 1 -->
+                    <div class="skills-category-card glass-panel scroll-reveal">
+                        <h3><i class="fa-solid fa-robot text-primary"></i> Data Science & Machine Learning</h3>
+                        <p class="category-summary">Modelado predictivo enfocado a la toma de decisiones y el
+                            descubrimiento de patrones comerciales.</p>
+                        <div class="skills-flex-container">
+                            <div class="skill-pill"><span class="skill-name">Python</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">SQL</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">R</span><span
+                                    class="skill-level">Intermedio</span></div>
+                            <div class="skill-pill"><span class="skill-name">Scikit-learn</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">Modelos Predictivos</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">Análisis Estadístico</span><span
+                                    class="skill-level">Experto</span></div>
+                            <div class="skill-pill"><span class="skill-name">EDA (Análisis Exploratorio)</span><span
+                                    class="skill-level">Experto</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2 -->
+                    <div class="skills-category-card glass-panel scroll-reveal">
+                        <h3><i class="fa-solid fa-brain text-accent"></i> Inteligencia Artificial Generativa</h3>
+                        <p class="category-summary">Diseño y desarrollo de sistemas inteligentes multi-agente e
+                            integración con entornos empresariales.</p>
+                        <div class="skills-flex-container">
+                            <div class="skill-pill"><span class="skill-name">Orquestación de Agentes</span><span
+                                    class="skill-level">Líder Técnico</span></div>
+                            <div class="skill-pill"><span class="skill-name">Model Context Protocol (MCP)</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">APIs de LLMs
+                                    (OpenAI/Gemini/Claude)</span><span class="skill-level">Experto</span></div>
+                            <div class="skill-pill"><span class="skill-name">Prompt Engineering</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">Integración de LLMs</span><span
+                                    class="skill-level">Avanzado</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3 -->
+                    <div class="skills-category-card glass-panel scroll-reveal">
+                        <h3><i class="fa-solid fa-chart-pie text-success"></i> Visualización & Business Intelligence
+                        </h3>
+                        <p class="category-summary">Traducción de datos crudos a cuadros de mando e informes
+                            interactivos de alta gerencia.</p>
+                        <div class="skills-flex-container">
+                            <div class="skill-pill"><span class="skill-name">Power BI</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">Looker Studio</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">IBM Cognos Analytics</span><span
+                                    class="skill-level">Certificado</span></div>
+                            <div class="skill-pill"><span class="skill-name">Excel Avanzado & Macros</span><span
+                                    class="skill-level">Experto</span></div>
+                            <div class="skill-pill"><span class="skill-name">KPI Dashboards</span><span
+                                    class="skill-level">Líder</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 4 -->
+                    <div class="skills-category-card glass-panel scroll-reveal">
+                        <h3><i class="fa-solid fa-cloud text-warning"></i> Ingeniería de Datos & Cloud</h3>
+                        <p class="category-summary">Infraestructura y almacenamiento necesarios para sostener pipelines
+                            analíticos en la nube.</p>
+                        <div class="skills-flex-container">
+                            <div class="skill-pill"><span class="skill-name">Supabase</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">Databricks</span><span
+                                    class="skill-level">Intermedio</span></div>
+                            <div class="skill-pill"><span class="skill-name">Data Warehouse</span><span
+                                    class="skill-level">Avanzado</span></div>
+                            <div class="skill-pill"><span class="skill-name">AWS</span><span
+                                    class="skill-level">Intermedio</span></div>
+                            <div class="skill-pill"><span class="skill-name">Google Cloud (GCP)</span><span
+                                    class="skill-level">Intermedio</span></div>
+                            <div class="skill-pill"><span class="skill-name">Azure</span><span
+                                    class="skill-level">Intermedio</span></div>
+                            <div class="skill-pill"><span class="skill-name">Git & GitHub</span><span
+                                    class="skill-level">Avanzado</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <h2 class="section-heading text-center">Proyectos de Innovación</h2>
+
+                <div class="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card glass-panel scroll-reveal" id="project-1">
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-wallet"></i></div>
+                            <h3 class="project-title">Control de Gastos PWA con Agentes IA</h3>
+                            <p class="project-description">
+                                Aplicación Web Progresiva para finanzas personales. Implementa la orquestación
+                                automatizada de múltiples modelos lingüísticos (LLMs) para procesar de forma nativa
+                                notas de voz, imágenes de comprobantes y comandos de texto, extrayendo datos
+                                estructurados para reportes analíticos personalizados.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">LLM Orchestration</span>
+                                <span class="tech-badge">PWA</span>
+                                <span class="tech-badge">Supabase</span>
+                                <span class="tech-badge">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/oversyve" target="_blank" class="btn-project-link"><i
+                                        class="fa-brands fa-github"></i> Repositorio GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="project-card glass-panel scroll-reveal" id="project-2">
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <h3 class="project-title">Plataforma Analítica en Tiempo Real con IA y MCP</h3>
+                            <p class="project-description">
+                                Plataforma empresarial que integra Model Context Protocol (MCP). Permite a los usuarios
+                                consultar bases de datos relacionales directamente mediante lenguaje natural, delegando
+                                a modelos de inteligencia artificial la generación segura y dinámica de gráficos,
+                                consultas SQL y reportes ejecutivos interactivos.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">MCP</span>
+                                <span class="tech-badge">APIs de LLM</span>
+                                <span class="tech-badge">Real-Time Databases</span>
+                                <span class="tech-badge">React & Node</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/oversyve" target="_blank" class="btn-project-link"><i
+                                        class="fa-brands fa-github"></i> Repositorio GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Certificaciones -->
+        <section id="certificates" class="certificates-section section-padding">
+            <div class="container">
+                <h2 class="section-heading text-center">Certificaciones de IBM</h2>
+                <p class="section-subheading text-center">Credenciales y especializaciones oficiales verificadas por
+                    Coursera y Credly</p>
+
+                <!-- Buscador y Filtros -->
+                <div class="certs-controls-container glass-panel">
+                    <div class="certs-search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="certs-search" placeholder="Filtrar por nombre de certificación...">
+                    </div>
+
+                    <div class="certs-filter-buttons">
+                        <button class="filter-btn active" data-filter="all" id="btn-filter-all">Todas</button>
+                        <button class="filter-btn" data-filter="data-science" id="btn-filter-ds">Ciencia de
+                            Datos</button>
+                        <button class="filter-btn" data-filter="data-analysis" id="btn-filter-da">Análisis de
+                            Datos</button>
+                        <button class="filter-btn" data-filter="ai-dev" id="btn-filter-ai">IA y Programación</button>
+                        <button class="filter-btn" data-filter="agile" id="btn-filter-agile">Agile / Scrum</button>
+                    </div>
+                </div>
+
+                <!-- Grid de Certificados (Cargados dinámicamente) -->
+                <div class="certs-grid" id="certs-grid">
+                    <div class="certs-loading text-center">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> Cargando credenciales...
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <h2 class="section-heading text-center">Contacto Profesional</h2>
+                <p class="section-subheading text-center">Establezcamos una conversación sobre proyectos, consultoría o
+                    liderazgo de equipos analíticos</p>
+
+                <div class="contact-grid">
+                    <!-- Info de Contacto -->
+                    <div class="contact-info-card glass-panel scroll-reveal">
+                        <h3>Contacto Directo</h3>
+                        <p>Disponible para consultas profesionales y consultorías de negocio basadas en datos e
+                            inteligencia artificial.</p>
+
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="info-details">
+                                    <span class="info-title">Correo Corporativo</span>
+                                    <a href="mailto:hoswarramirez.24@gmail.com"
+                                        class="info-link">hoswarramirez.24@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="info-details">
+                                    <span class="info-title">Línea Telefónica / WhatsApp</span>
+                                    <a href="tel:+51910855035" class="info-link">+51 910 855 035</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="info-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+                                <div class="info-details">
+                                    <span class="info-title">Ubicación Actual</span>
+                                    <span class="info-value">Lima, Perú</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="https://github.com/oversyve" target="_blank" class="social-icon"
+                                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://wa.me/51910855035" target="_blank" class="social-icon"
+                                aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-card glass-panel scroll-reveal">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" id="name" required placeholder="Ej: Ing. Juan Pérez">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Dirección de Correo</label>
+                                <input type="email" id="email" required placeholder="correo@empresa.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" required
+                                    placeholder="Ej: Propuesta de consultoría / Oportunidad laboral">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Detalle del Mensaje</label>
+                                <textarea id="message" rows="5" required
+                                    placeholder="Escriba aquí los detalles de su requerimiento o mensaje..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">
+                                <span class="btn-text">Enviar Mensaje</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div id="form-feedback" class="form-feedback hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container text-center">
+                <p>&copy; 2026 Hoswar Ramirez Perez. Todos los derechos reservados.</p>
+                <p class="footer-subtext">Portafolio y CV Digital de Nivel Ejecutivo | Desarrollado de forma nativa en
+                    HTML5, CSS3 y Vanilla JavaScript.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Botón Flotante de Contacto Rápido (Speed Dial) -->
+    <div class="speed-dial" id="speed-dial-container">
+        <!-- Botones secundarios (se despliegan arriba) -->
+        <div class="speed-dial-options" id="speed-dial-options">
+            <a href="tel:+51910855035" class="speed-dial-btn dial-phone" id="dial-phone" title="Llamar al Móvil"
+                aria-label="Llamar por teléfono">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="https://wa.me/51910855035?text=Hola%20Hoswar,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20propuesta."
+                target="_blank" class="speed-dial-btn dial-whatsapp" id="dial-whatsapp" title="WhatsApp"
+                aria-label="Contactar por WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:hoswarramirez.24@gmail.com?subject=Consulta%20desde%20Portafolio%20Profesional"
+                class="speed-dial-btn dial-email" id="dial-email" title="Enviar Email"
+                aria-label="Enviar correo electrónico">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Botón principal selector -->
+        <button class="speed-dial-main" id="speed-dial-main" aria-expanded="false"
+            aria-label="Abrir opciones de contacto rápido">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
+</body>
+
+</html>
