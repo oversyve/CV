@@ -617,24 +617,28 @@
                         <form id="contact-form" action="https://formspree.io/f/xkoebapy" method="POST">
                             <div class="form-group">
                                 <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" required placeholder="Ej: Ing. Juan Pérez">
+                                <input type="text" id="name" name="name" required placeholder="Ej: Ing. Juan Pérez">
+                                <span class="field-error" data-field-error="name"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Dirección de Correo</label>
-                                <input type="email" id="email" required placeholder="correo@empresa.com">
+                                <input type="email" id="email" name="email" required placeholder="correo@empresa.com">
+                                <span class="field-error" data-field-error="email"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="subject">Asunto</label>
-                                <input type="text" id="subject" required
+                                <input type="text" id="subject" name="subject" required
                                     placeholder="Ej: Propuesta de consultoría / Oportunidad laboral">
+                                <span class="field-error" data-field-error="subject"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="message">Detalle del Mensaje</label>
-                                <textarea id="message" rows="5" required
+                                <textarea id="message" name="message" rows="5" required
                                     placeholder="Escriba aquí los detalles de su requerimiento o mensaje..."></textarea>
+                                <span class="field-error" data-field-error="message"></span>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">

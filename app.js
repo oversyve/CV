@@ -595,6 +595,10 @@ function initContactForm() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        // Limpiar errores de campo previos
+        form.querySelectorAll('.field-error').forEach(el => el.classList.remove('visible'));
+        form.querySelectorAll('.form-group').forEach(el => el.classList.remove('error'));
+
         submitBtn.disabled = true;
         submitBtnText.textContent = 'Enviando...';
         submitBtnIcon.className = 'fa-solid fa-circle-notch fa-spin';
@@ -613,11 +617,28 @@ function initContactForm() {
                 form.reset();
             } else {
                 const data = await response.json();
-                throw new Error(data.error || 'Error del servidor');
+                if (data.errors && Array.isArray(data.errors)) {
+                    data.errors.forEach(err => {
+                        const errorEl = form.querySelector(`[data-field-error="${err.field}"]`);
+                        const group = document.getElementById(err.field)?.closest('.form-group');
+                        if (errorEl) {
+                            errorEl.textContent = err.message;
+                            errorEl.classList.add('visible');
+                        }
+                        if (group) group.classList.add('error');
+                    });
+                    throw new Error('Corrige los campos resaltados');
+                } else {
+                    throw new Error(data.error || 'Error del servidor');
+                }
             }
         } catch (err) {
             feedback.className = 'form-feedback error';
-            feedback.innerHTML = '<strong>Error al enviar.</strong> Intenta de nuevo o escribe directamente a <a href="mailto:hoswarramirez.24@gmail.com" style="color:inherit;text-decoration:underline;">hoswarramirez.24@gmail.com</a>';
+            if (!form.querySelector('.field-error.visible')) {
+                feedback.innerHTML = '<strong>Error al enviar.</strong> Intenta de nuevo o escribe directamente a <a href="mailto:hoswarramirez.24@gmail.com" style="color:inherit;text-decoration:underline;">hoswarramirez.24@gmail.com</a>';
+            } else {
+                feedback.innerHTML = '<strong>Corrige los campos marcados</strong> y vuelve a intentar.';
+            }
         }
 
         feedback.classList.remove('hidden');

@@ -1379,6 +1379,24 @@ span.highlight-accent {
     display: none !important;
 }
 
+/* Errores por campo */
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.field-error {
+    display: none;
+    font-size: 0.75rem;
+    color: #dc2626;
+    margin-top: 2px;
+}
+
+.field-error.visible {
+    display: block;
+}
+
 .form-feedback {
     margin-top: 12px;
     padding: 10px;
