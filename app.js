@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCanvasBackground();
     initScrollReveal();
     initCertificates();
+    initPhotoModal();
     initContactForm();
     initSpeedDial();
 });
@@ -582,37 +583,51 @@ function initCertificates() {
 }
 
 // ==========================================================================
-// 7. FORMULARIO DE CONTACTO (SIMULACIÓN PREMIUM)
+// 7. FORMULARIO DE CONTACTO (ENVÍO REAL CON FORMDATA)
 // ==========================================================================
 function initContactForm() {
     const form = document.getElementById('contact-form');
     const feedback = document.getElementById('form-feedback');
     const submitBtn = document.getElementById('btn-submit-form');
     const submitBtnText = submitBtn.querySelector('.btn-text');
+    const submitBtnIcon = submitBtn.querySelector('i');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         submitBtn.disabled = true;
-        submitBtnText.textContent = 'Enviando Mensaje...';
-        submitBtn.querySelector('i').className = 'fa-solid fa-circle-notch fa-spin';
-        
+        submitBtnText.textContent = 'Enviando...';
+        submitBtnIcon.className = 'fa-solid fa-circle-notch fa-spin';
+        feedback.classList.add('hidden');
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                feedback.className = 'form-feedback success';
+                feedback.innerHTML = '<strong>¡Mensaje Enviado!</strong> Gracias por tu contacto. Te responderé en menos de 24 horas.';
+                form.reset();
+            } else {
+                const data = await response.json();
+                throw new Error(data.error || 'Error del servidor');
+            }
+        } catch (err) {
+            feedback.className = 'form-feedback error';
+            feedback.innerHTML = '<strong>Error al enviar.</strong> Intenta de nuevo o escribe directamente a <a href="mailto:hoswarramirez.24@gmail.com" style="color:inherit;text-decoration:underline;">hoswarramirez.24@gmail.com</a>';
+        }
+
+        feedback.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtnText.textContent = 'Enviar Mensaje';
+        submitBtnIcon.className = 'fa-solid fa-paper-plane';
+
         setTimeout(() => {
-            feedback.className = 'form-feedback success';
-            feedback.innerHTML = `<strong>¡Mensaje Enviado con Éxito!</strong> Agradezco tu contacto. Te responderé en menos de 24 horas.`;
-            feedback.classList.remove('hidden');
-            
-            form.reset();
-            
-            submitBtn.disabled = false;
-            submitBtnText.textContent = 'Enviar Mensaje';
-            submitBtn.querySelector('i').className = 'fa-solid fa-paper-plane';
-            
-            setTimeout(() => {
-                feedback.classList.add('hidden');
-            }, 6000);
-            
-        }, 1200);
+            feedback.classList.add('hidden');
+        }, 8000);
     });
 }
 
@@ -653,4 +668,29 @@ function initSpeedDial() {
             dialMain.querySelector('i').className = 'fa-solid fa-comments';
         }
     });
+}
+
+// ==========================================================================
+// 9. MODAL DE FOTO A PANTALLA COMPLETA
+// ==========================================================================
+function initPhotoModal() {
+    const photo = document.querySelector('.sidebar-photo');
+    const modal = document.getElementById('photo-modal');
+    const mobilePhoto = document.querySelector('.mobile-logo-photo');
+
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    photo.addEventListener('click', openModal);
+    if (mobilePhoto) {
+        mobilePhoto.addEventListener('click', openModal);
+    }
+    modal.addEventListener('click', closeModal);
 }
