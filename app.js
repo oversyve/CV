@@ -704,13 +704,12 @@ function initScrollToTop() {
     const btn = document.getElementById('scroll-to-top');
     if (!btn) return;
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            btn.classList.add('visible');
-        } else {
-            btn.classList.remove('visible');
-        }
-    });
+    const toggle = () => {
+        btn.classList.toggle('visible', window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
 
     btn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
