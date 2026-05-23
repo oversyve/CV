@@ -605,10 +605,15 @@ function initContactForm() {
         feedback.classList.add('hidden');
 
         try {
+            const formData = new FormData(form);
+            const jsonData = Object.fromEntries(formData.entries());
             const response = await fetch(form.action, {
                 method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
+                body: JSON.stringify(jsonData),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
             });
 
             if (response.ok) {
