@@ -1592,8 +1592,8 @@ span.highlight-accent {
         z-index: 150;
         padding-top: 60px;
         overflow: hidden;
-        height: 100dvh;
         height: 100vh;
+        height: 100dvh;
     }
     
     .sidebar.active {
@@ -1603,8 +1603,26 @@ span.highlight-accent {
     
     .sidebar-nav {
         flex: 1 1 auto;
-        overflow-y: auto;
+        overflow: hidden;
         min-height: 0;
+    }
+    
+    .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .sidebar-links li {
+        flex: 1;
+        display: flex;
+        min-height: 0;
+    }
+    
+    .sidebar-links .nav-link {
+        width: 100%;
+        padding: 4px 12px;
+        font-size: 0.78rem;
     }
     
     .sidebar-footer {
